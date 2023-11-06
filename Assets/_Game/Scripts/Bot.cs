@@ -8,13 +8,13 @@ public class Bot : Character
 {
     public NavMeshAgent navMeshAgent;
     [SerializeField] Transform finishBox;
-    [SerializeField] private List<GameObject> finalStair;
     [SerializeField] private GameObject check;
     public int currentStair = 0;
     private IState currentState;
     private Vector3 target;
     private bool isPick= false;
     private int brickLayer= 1 << 6;
+    private int EndStairLayer= 1 << 7;
 
     void Start()
     {
@@ -73,7 +73,12 @@ public class Bot : Character
         }
         else
         {
-            navMeshAgent.SetDestination(finalStair[currentStair - 1].transform.position);
+            //navMeshAgent.SetDestination(finalStair[currentStair - 1].transform.position);
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 100, EndStairLayer);
+            foreach (Collider collider in hitColliders)
+            {
+                if (collider.name == $"FinalStairs{currentStair}") navMeshAgent.SetDestination(collider.transform.position);
+            }
         }
     }
     public Transform GetDestination()

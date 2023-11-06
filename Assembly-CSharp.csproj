@@ -66,6 +66,7 @@
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\_Game\Scripts\LevelManager.cs" />
     <Compile Include="Assets\_Game\Scripts\Player.cs" />
+    <Compile Include="Assets\_Game\Scripts\Sigleton.cs" />
     <Compile Include="Assets\_Game\Scripts\StateMachine\PickBrickState.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />

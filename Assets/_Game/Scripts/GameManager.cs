@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Sigleton<GameManager>
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]public GameObject vitoryPanel;
+    [SerializeField] GameObject failPanel;
+    
+    public void Victory_Fail(GameObject gameObject)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (gameObject.name == conststring.PLAYER)
+        {
+            vitoryPanel.SetActive(true);
+        }
+        else
+        {
+            failPanel.SetActive(true);
+        }
     }
 }

@@ -363,6 +363,7 @@
 "Assets/_Game/Scripts/MainCamera.cs"
 "Assets/_Game/Scripts/NextStage.cs"
 "Assets/_Game/Scripts/Player.cs"
+"Assets/_Game/Scripts/Sigleton.cs"
 "Assets/_Game/Scripts/SpawnAtBegin.cs"
 "Assets/_Game/Scripts/StateMachine/AcrossBridgeState.cs"
 "Assets/_Game/Scripts/StateMachine/IdleState.cs"

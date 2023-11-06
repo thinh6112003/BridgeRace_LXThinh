@@ -13,7 +13,7 @@ public class Character : MonoBehaviour
     public void Addbrick(GameObject brick)
     {
         GameObject newBrick = Instantiate(listBrickPrefab[(int)colorCharater], transform);
-        newBrick.transform.localPosition = new Vector3(0, listBrick.Count * 0.26f, -1f);
+        newBrick.transform.localPosition = new Vector3(0, listBrick.Count * 0.26f, -0.75f);
         listBrick.Add(newBrick);
         Destroy(brick);
     }
